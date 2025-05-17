@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Browser extensions manager UI</title>
+</head>
+<body>
+  <header>
+    <img src="assets/images/logo.svg" alt="" class="logo">
+    <button id="themeToggle">
+      <img src="assets/images/icon-moon.svg" alt="">
+    </button>
+  </header>
+
+  <main>
+    <section class="toolbar">
+      <h1>Extensions List</h1>
+      <div class="filters">
+        <button data-filter="all" class="filter-button active">All</button>
+        <button data-filter="active" class="filter-button">Active</button>
+        <button data-filter="inactive" class="filter-button">Inactive</button>
+      </div>
+    </section>
+
+    <section id="extensions" class="extensions-grid">
+      <!-- Extensions will be rendered here -->
+    </section>
+  </main>
+
+  <footer>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+      Coded by <a href="https://www.linkedin.com/in/yashi-singh-b4143a246">Yashi Singh</a>.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

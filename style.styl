@@ -1,0 +1,269 @@
+neutral-900 = hsl(227, 75%, 14%)
+neutral-800 = hsl(226, 25%, 17%)
+neutral-700 = hsl(225, 23%, 24%)
+neutral-600 = hsl(226, 11%, 37%)
+neutral-300 = hsl(0, 0%, 78%)
+neutral-200 = hsl(217, 61%, 90%)
+neutral-100 = hsl(0, 0%, 93%)
+neutral-0 = hsl(200, 60%, 99%)
+
+red-400 = hsl(3, 86%, 64%)
+red-500 = hsl(3, 71%, 56%)
+red-700 = hsl(3, 77%, 44%)
+
+light-gradient = linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%)
+dark-gradient = linear-gradient(180deg, #040918 0%, #091540 100%)
+
+@font-face 
+  font-family 'NotoSans'
+  src url('./assets/fonts/static/NotoSans-Regular.ttf') format('truetype')
+  font-weight normal
+  font-style normal
+
+@font-face 
+  font-family 'NotoSans'
+  src url('./assets/fonts/static/NotoSans-Medium.ttf') format('truetype')
+  font-weight 500
+  font-style normal
+
+@font-face 
+  font-family 'NotoSans'
+  src url('./assets/fonts/static/NotoSans-Bold.ttf') format('truetype')
+  font-weight bold
+  font-style normal
+
+* 
+  margin 0
+  padding 0
+  box-sizing border-box
+
+body
+  font-family 'NotoSans', sans-serif
+  background light-gradient
+  color neutral-900
+  min-height 100vh
+
+  &.dark-theme
+    background dark-gradient
+
+    header 
+      background neutral-800
+      border none
+
+      .logo
+        content url("assets/images/logo-dark.svg") 
+
+      #themeToggle
+        background-color neutral-700
+
+    main 
+      .toolbar
+        h1
+          color neutral-0   
+
+        .filters
+          button 
+            background-color neutral-700
+            border 2px solid neutral-600
+            color neutral-200
+
+            &.active 
+              background-color red-400
+              border none
+              color neutral-900
+
+      .extensions-grid 
+        .extension
+          background-color neutral-800    
+          border 2px solid neutral-600   
+
+          .info
+            div
+              h3  
+                color neutral-0 
+
+              p 
+                color neutral-300
+
+          .btns-info 
+            .remove-btn 
+              background-color transparent
+              color neutral-300
+              border-color netural-700    
+
+            input[type="checkbox"]
+              background-color neutral-600
+              transition background-color 0.3s
+
+              &:checked
+                background-color red-400
+
+                &:hover
+                  background-color red-500
+
+    footer 
+        color neutral-200
+
+header
+  display flex
+  justify-content space-between
+  max-width 1100px
+  width 95%
+  margin 3rem auto
+  background-color neutral-0
+  padding 1rem
+  border 2px solid neutral-200
+  border-radius 1rem
+  flex-wrap wrap
+
+  #themeToggle 
+    cursor pointer
+    background-color neutral-100
+    border none
+    border-radius 1rem
+    padding 0.8rem
+    transition 0.2s ease
+
+    &:hover
+      background-color neutral-300 !important
+
+main 
+  max-width 1100px
+  width 95%
+  margin 0 auto   
+
+  .toolbar
+    display flex
+    align-items center
+    justify-content space-between
+    flex-wrap wrap
+    margin-bottom 2rem
+    gap 1rem
+
+    h1 
+      font-size 2.5rem   
+
+    .filters
+      display flex
+      gap 0.5rem
+
+      button 
+        background-color neutral-0
+        font-family inherit
+        font-weight 500
+        font-size 1.15rem
+        padding: 0.3rem 1rem;
+        border-radius 2rem
+        cursor pointer
+        border 2px solid neutral-200
+        transition 0.2s ease
+
+        &:hover
+          background-color lighten(neutral-100, 60%)
+          color neutral-600
+
+        &.active
+          background-color red-700
+          color neutral-0
+          border none
+
+          &:hover 
+            background-color red-500
+
+  .extensions-grid 
+    display grid
+    grid-template-columns repeat(auto-fit, minmax(280px, 1fr))
+    gap 1rem
+    margin-top 1.5rem
+    margin-bottom 4rem
+
+    .extension 
+      background-color neutral-0
+      padding 1rem
+      border-radius 20px
+      border 2px solid neutral-200
+
+      .info 
+        display flex
+        flex-wrap wrap
+        gap 0.5rem
+        align-items center
+        margin-bottom 2rem
+
+        img     
+          width 70px
+          height 70px
+
+        div
+          h3 
+            margin 0.5rem 0 0.25rem
+        
+          p 
+            font-size 0.95rem;
+            max-width 240px;
+            width 100%;
+            color neutral-600
+      
+      .btns-info
+        display flex
+        justify-content space-between
+        align-items center
+
+        .remove-btn 
+          padding 0.5rem 0.8rem
+          cursor pointer
+          border-radius 1.25rem
+          font-family inherit
+          font-size 0.95rem
+          background-color neutral-0
+          border 1.5px solid neutral-200
+          font-weight 500
+          transition 0.2s ease
+
+          &:hover 
+            background-color red-700
+            color neutral-100
+            border none
+
+        input[type="checkbox"]
+          width 40px
+          height 25px
+          appearance none
+          background-color neutral-300
+          border-radius 20px
+          position relative
+          cursor pointer
+          outline none
+          transition background-color 0.3s
+
+          &::before
+            content ""
+            position absolute
+            top 3.3px
+            left 2.5px
+            width 18px
+            height 18px
+            background-color neutral-0
+            border-radius 50%
+            transition transform 0.3s
+
+          &:checked
+            background-color red-700
+
+            &:hover
+              background-color red-400
+
+            &::before
+              transform translateX(16px)
+
+footer
+  text-align center
+  margin-bottom 2rem
+  color neutral-600
+  
+  a,
+  a:visited
+      text-decoration none   
+      color red-400
+      font-weight 600
+      font-style italic     
