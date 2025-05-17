@@ -34,16 +34,17 @@ Users should be able to:
 
 ### Screenshot
 
-** Desktop Design **
+**Desktop Design**
 ![Desktop Design](design/desktop-design.png)
 
-** Mobile Design **
+**Mobile Design**
+
 <img src="design/mobile-design.png" height=750px>
 
 ### Links
 
-* Solution URL: [Add solution URL here](https://your-solution-url.com)
-* Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+* Solution URL: [Solution](https://www.frontendmentor.io/solutions/browser-extension-manager-ui-cKaJw8-nrF)
+* Live Site URL: [Live Site](https://yashi-singh-9.github.io/Browser-Extension-Manager-UI/)
 
 ## My process
 
